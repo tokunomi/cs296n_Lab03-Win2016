@@ -12,7 +12,7 @@ namespace CommInfo.Controllers
 {
     public class ThreadsController : Controller
     {
-        private MessagesContext db = new MessagesContext();
+        private CommInfoContext db = new CommInfoContext();
 
         // GET: Threads
         public ActionResult Index()

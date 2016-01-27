@@ -21,56 +21,56 @@
     <packageHasNamedElement>
       <class
         Id="26c5eb92-0979-4f77-b522-851787833b28"
-        name="Members"
+        name="Member"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="4aecf199-7011-4002-b3a1-aa8214a85350"
+            Id="1ef7fdd8-438b-458e-84f9-2881bc7c9826"
             isDerived="false"
             sourceEndRoleName="Members"
-            targetEndRoleName="Messages"
+            targetEndRoleName="Threads"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="ac0b6975-7d07-4571-8680-de0061669cd8"
-              LastKnownName="Messages"
+              Id="6540bf73-f9f9-4855-b438-3d50d9fb129f"
+              LastKnownName="Thread"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e0ffda7f-d7e1-45e1-aa7c-9b369930af33"
+                  Id="3f248933-47eb-4f7b-ab3d-2eb011630401"
                   name="Members"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="Composite"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="05c2e936-0d31-4870-bf64-91c6ac9677a1"
-                  name="Messages"
+                  Id="d31d17d8-54ca-4830-8763-20589cd6c1f1"
+                  name="Threads"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="true">
+                  isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="9929a7bc-0f99-4598-863b-91e80ab0aee4"
+                      Id="3875756d-565d-4a97-8e64-96c2405dd027"
                       name="Lower"
                       value="0" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="78995ffc-e0c3-4dfd-b6d4-a4eff32f5814"
+                      Id="d6e886ae-64ca-4a1f-9dae-b2dc6ba92c17"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -112,64 +112,10 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="400da382-fdfd-4380-b53c-b5271e94547d"
-            isDerived="false"
-            sourceEndRoleName="Messages"
-            targetEndRoleName="Topics"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="6540bf73-f9f9-4855-b438-3d50d9fb129f"
-              LastKnownName="Topics"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="bd3dc531-b926-4311-9cc5-8c5282e2a61d"
-                  name="Messages"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c34a1869-fc28-4149-9130-7abcfdf8ee51"
-                  name="Topics"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="5f974723-1997-4a1b-a418-6f51f64eb018"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="e308c6d4-cc65-42ed-a5eb-4a4ef9aa603d"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="4c898914-39b1-4096-be91-40ba622dfd1a"
-            name="From"
+            name="Reply"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -180,7 +126,7 @@
             isComposite="false" />
           <property
             Id="19fa3980-e9d8-47de-aa39-055aa1196e49"
-            name="To"
+            name="Member.Name"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -222,16 +168,269 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="585a3c2b-b092-4114-be99-dc53f3204af2"
+            name="Thread.ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="6540bf73-f9f9-4855-b438-3d50d9fb129f"
-        name="Topics"
+        name="Thread"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e47e472a-0283-4740-b2ba-1d071e02eaac"
+            isDerived="false"
+            sourceEndRoleName="Threads"
+            targetEndRoleName="Messages"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ac0b6975-7d07-4571-8680-de0061669cd8"
+              LastKnownName="Messages"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="608153bc-f2b1-4575-baab-7cc1ccf13828"
+                  name="Threads"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4c19caf-0d1d-426c-8339-2940d5f957bd"
+                  name="Messages"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="939c2211-0433-4e90-83f4-6a90b8b946aa"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d07a4985-4ef8-4617-a157-df4ece19a95e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="768b0689-dbe6-4713-9d4e-212ddb147bcb"
+            name="Title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="01e2bb6d-a70c-4b40-b323-ac2f45af504c"
+            name="Member.ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b0b176b9-0166-49bb-a0b5-a2368d8b87e0"
+            name="Forum.ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="897ba8c4-f014-4c80-923f-fdd982b8d576"
+            name="Member.Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4b509ba3-de77-4cd5-8fcd-95fcbd9d5f81"
+        name="Forum"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="be3c8a28-1e1c-47e1-9792-ad758fdddd04"
+            isDerived="false"
+            sourceEndRoleName="Forum"
+            targetEndRoleName="Threads"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6540bf73-f9f9-4855-b438-3d50d9fb129f"
+              LastKnownName="Thread"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2863530-53b8-40b8-afb1-86b1bab73eb2"
+                  name="Forum"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="243d7f08-c36f-4376-874a-a710c5b5b682"
+                  name="Threads"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="54cd5cc8-9b9d-469f-9930-55c43476f9af"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4d9e600c-4445-47df-9fda-9512e0f60a59"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a2c87416-89e0-4cdf-9702-328770d071c0"
+            isDerived="false"
+            sourceEndRoleName="Forum"
+            targetEndRoleName="Member"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="26c5eb92-0979-4f77-b522-851787833b28"
+              LastKnownName="Member"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc80c292-89ac-4a9b-ab1d-7b099d22987d"
+                  name="Forum"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fe76ad93-d6b9-4a9a-9f29-7de77b4cdf89"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0eaefdf4-0cda-4e08-ba6c-896eeb6247e4"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9545d432-144f-4229-9bf1-e3e2a5c46e9c"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="124342d8-1dee-42a8-8b0c-49feb2b5cf48"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4d194f2a-0ddc-46c9-b4c1-95db11c76686"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f293cd08-1f6e-4327-8faa-2367aed2bf69"
+            name="Title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -14,7 +14,7 @@ namespace CommInfo
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new MessagesDbInitilizer());
+            Database.SetInitializer(new ForumDbInitilizer());
             //Database.SetInitializer(new DropCreateDatabaseAlways<MessagesContext>());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

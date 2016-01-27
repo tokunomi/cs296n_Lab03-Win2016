@@ -12,7 +12,7 @@ namespace CommInfo.Controllers
 {
     public class ForaController : Controller
     {
-        private MessagesContext db = new MessagesContext();
+        private CommInfoContext db = new CommInfoContext();
 
         // GET: Fora
         public ActionResult Index()

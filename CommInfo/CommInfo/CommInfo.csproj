@@ -172,8 +172,8 @@
     <Compile Include="Models\Forum.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Message.cs" />
-    <Compile Include="Models\MessagesContext.cs" />
-    <Compile Include="Models\MessagesDbInitilizer.cs" />
+    <Compile Include="Models\CommInfoContext .cs" />
+    <Compile Include="Models\ForumDbInitilizer.cs" />
     <Compile Include="Models\NDay.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\News.cs" />

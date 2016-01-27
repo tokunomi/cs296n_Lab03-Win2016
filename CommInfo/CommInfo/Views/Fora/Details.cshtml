@@ -1,16 +1,24 @@
 ﻿@model CommInfo.Models.Forum
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Forum Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
     <h4>Forum</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Threads)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Threads)
+        </dd>
+
     </dl>
 </div>
 <p>

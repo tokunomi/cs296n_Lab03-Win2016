@@ -8,7 +8,7 @@ namespace CommInfo.Models
     public class Member
     {
         public int MemberID { get; set; }
-        public string Username { get; set; }
+        public string Name { get; set; }
         public string email { get; set; }
     }
 }
